@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
+    <NoWarn>$(NoWarn);CS1591;CS0618</NoWarn>
+    <LangVersion>9.0</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>Casbin.NET</PackageId>
+    <Version>1.4.0</Version>
+    <PackageIcon>casbin.png</PackageIcon>
+    <Description>Casbin ported to dotnet core</Description>
+    <PackageReleaseNotes>
+      1. Add Batch APIs，Scaling ABAC (eval function) features.
+2. Improve performance and reduce the allocate of enforcer and build in funtions.
+3. Update DynamicExpresso.Core version to v2.3.2.
+    </PackageReleaseNotes>
+    <Authors>Casbin, Zhikui H</Authors>
+    <Company>Zhikui H</Company>
+    <Product>Casbin.NET</Product>
+    <RepositoryType>GIT</RepositoryType>
+    <Copyright>Apache License 2.0</Copyright>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/casbin/Casbin.NET</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/casbin/Casbin.NET</PackageProjectUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="casbin.snk" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DynamicExpresso.Core" Version="2.3.3" />
+    <PackageReference Include="System.Memory" Version="4.5.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="casbin.png" Pack="true" Visible="false" PackagePath="" />
+  </ItemGroup>
+
+</Project>
